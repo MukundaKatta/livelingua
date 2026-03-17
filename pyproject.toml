@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "livelingua"
+version = "0.1.0"
+description = "AI Meeting Translator - Real-time translation for multilingual meetings"
+authors = [{ name = "Mukunda Katta" }]
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.0",
+    "click>=8.0",
+    "rich>=13.0",
+]
+
+[project.scripts]
+livelingua = "livelingua.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
